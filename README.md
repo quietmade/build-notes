@@ -1,13 +1,55 @@
-https://github.com/user-attachments/assets/1eb78d52-3a57-4b11-83a4-306473d42417
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9ba2e5d7-2e77-463d-b782-5e55d65078a6" alt="AFTERTONE banner" width="100%">
+</p>
 
-<p align="center"><em>A retro two-person messaging terminal with browser-side encrypted message relay.</em></p>
+<p align="center">
+  <em>A retro two-person messaging terminal with browser-side encrypted message relay.</em>
+</p>
 
 ## Table of Contents
 
-| Document | What it covers | Updated |
-| --- | --- | --- |
-| [Status](aftertone/STATUS.md) | Current state and open items | 29 Oct 2026 |
-| [Bugs](aftertone/BUGS.md) | Open bugs, closed only with named evidence | 29 Oct 2026 |
-| [Changelog](aftertone/CHANGELOG.md) | What changed, by date | 29 Oct 2026 |
-| [Architecture](aftertone/architecture/README.md) | Architecture notes | 29 Oct 2026 |
-| [Bug report template](.github/ISSUE_TEMPLATE/bug-report.md) | How to report a bug | 29 Oct 2026 |
+<table width="">
+  <thead>
+    <tr>
+      <th align="left" width="10%">Document</th>
+      <th align="left" width="70%">What it covers</th>
+      <th align="left" width="20%">Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="aftertone/STATUS.md">Status</a></td>
+      <td>Current state and open items</td>
+      <td>29 Oct 2026</td>
+    </tr>
+    <tr>
+      <td><a href="aftertone/BUGS.md">Bugs</a></td>
+      <td>Open bugs, closed only with named evidence</td>
+      <td>29 Oct 2026</td>
+    </tr>
+    <tr>
+      <td><a href="aftertone/CHANGELOG.md">Changelog</a></td>
+      <td>What changed, by date</td>
+      <td>29 Oct 2026</td>
+    </tr>
+    <tr>
+      <td><a href="aftertone/architecture/README.md">Architecture</a></td>
+      <td>Architecture notes</td>
+      <td>29 Oct 2026</td>
+    </tr>
+    <tr>
+      <td><a href=".github/ISSUE_TEMPLATE/bug-report.md">Bug report template</a></td>
+      <td>How to report a bug</td>
+      <td>29 Oct 2026</td>
+    </tr>
+    <tr>
+      <td><a href="aftertone/STATUS.md">Status</a></td>
+      <td>Current state and open items</td>
+      <td>Updated regularly</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+> *AFTERTONE's code repo will never be public, so its docs, status, bugs, and history live here instead — in a separate repo — keeping the code itself protected and the code repo clean.*
