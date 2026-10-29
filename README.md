@@ -6,13 +6,15 @@
   <em>A retro two-person messaging terminal with browser-side encrypted message relay.</em>
 </p>
 
+> *AFTERTONE's code repo will never be public, so its docs, status, bugs, and history live here instead — in a separate repo — keeping the code itself protected and the code repo clean.*
+
 ## Table of Contents
 
-<table width="">
+<table width="100">
   <thead>
     <tr>
-      <th align="left" width="10%">Document</th>
-      <th align="left" width="70%">What it covers</th>
+      <th align="left" width="30%">Document</th>
+      <th align="left" width="50%">What it covers</th>
       <th align="left" width="20%">Updated</th>
     </tr>
   </thead>
@@ -42,14 +44,17 @@
       <td>How to report a bug</td>
       <td>29 Oct 2026</td>
     </tr>
-    <tr>
-      <td><a href="aftertone/STATUS.md">Status</a></td>
-      <td>Current state and open items</td>
-      <td>Updated regularly</td>
-    </tr>
   </tbody>
 </table>
 
 ---
 
-> *AFTERTONE's code repo will never be public, so its docs, status, bugs, and history live here instead — in a separate repo — keeping the code itself protected and the code repo clean.*
+https://github.com/user-attachments/assets/b732c038-f2dd-483b-8ae3-25654f5937bf
+
+## AFTERTONE Runtime Architecture: Two Clients and Server
+
+Two browser clients and one server. Each client holds its own keys and encrypts messages in the browser; the server only relays encrypted messages and never sees plaintext.
+
+Flow: Terms → Invite and pairing → Key exchange → Bilateral fingerprint verification → Encrypted relay over WebSocket.
+
+Server: Node.js WebSocket relay, with server-snapshotted expiry and origin checks on WebSocket upgrade and Terms acceptance.
