@@ -1,0 +1,19 @@
+name: Rename AFTERTONE demo video
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rename video file
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git mv "assets/213f700ab43333d08b808ee45aed0cd0dd9bfd30efae3918388202372a148081.mp4" "assets/aftertone-demo.mp4"
+          rm ".github/workflows/rename-aftertone.yml"
+          git add -A
+          git commit -m "Rename AFTERTONE demo video to aftertone-demo.mp4"
+          git push
