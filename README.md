@@ -6,6 +6,14 @@
   <em>A retro two-person messaging terminal with browser-side encrypted message relay.</em>
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-Runtime-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js">
+  <img src="https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/CSS3-Styling-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/Web_Crypto_API-Encryption-8A2BE2?style=flat-square" alt="Web Crypto API">
+  <img src="https://img.shields.io/badge/Tests-CI_297_Passing-2EA44F?style=flat-square" alt="Tests">
+</p>
+
 > *AFTERTONE's code repo will never be public, so its docs, status, bugs, and history live here instead — in a separate repo — keeping the code itself protected and the code repo clean.*
 
 | Document | What it covers |
