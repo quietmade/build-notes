@@ -10,42 +10,13 @@
 
 ## Table of Contents
 
-<table width="100">
-  <thead>
-    <tr>
-      <th align="left" width="30%">Document</th>
-      <th align="left" width="50%">What it covers</th>
-      <th align="left" width="20%">Updated</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="aftertone/STATUS.md">Status</a></td>
-      <td>Current state and open items</td>
-      <td>29 Oct 2026</td>
-    </tr>
-    <tr>
-      <td><a href="aftertone/BUGS.md">Bugs</a></td>
-      <td>Open bugs, closed only with named evidence</td>
-      <td>29 Oct 2026</td>
-    </tr>
-    <tr>
-      <td><a href="aftertone/CHANGELOG.md">Changelog</a></td>
-      <td>What changed, by date</td>
-      <td>29 Oct 2026</td>
-    </tr>
-    <tr>
-      <td><a href="aftertone/architecture/README.md">Architecture</a></td>
-      <td>Architecture notes</td>
-      <td>29 Oct 2026</td>
-    </tr>
-    <tr>
-      <td><a href=".github/ISSUE_TEMPLATE/bug-report.md">Bug report template</a></td>
-      <td>How to report a bug</td>
-      <td>29 Oct 2026</td>
-    </tr>
-  </tbody>
-</table>
+| Document | What it covers | Updated |
+| --- | --- | --- |
+| [Status](aftertone/STATUS.md) | Current state, open items, known limitations, and the evidence still needed before release | 29 Oct 2026 |
+| [Bugs](aftertone/BUGS.md) | Open bugs, closed only with named evidence such as a failing test, a trace, or a written report | 29 Oct 2026 |
+| [Changelog](aftertone/CHANGELOG.md) | What changed, by date, with the source-project history kept separate from these documentation notes | 29 Oct 2026 |
+| [Architecture](aftertone/architecture/README.md) | System shape, message flow, trust boundaries, and the four interactive Archify diagrams | 29 Oct 2026 |
+| [Bug report template](.github/ISSUE_TEMPLATE/bug-report.md) | How to report a bug without leaking invite codes, encryption keys, or message content | 29 Oct 2026 |
 
 ---
 
