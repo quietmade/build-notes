@@ -1,139 +1,109 @@
-# Engineering Documentation
+# AFTERTONE — Project Notes
 
-> **Documentation where the limits are written down next to the claims.**
->
-> Repository name: `build-notes` — the engineering documentation
-> collection for projects I build, starting with AFTERTONE. Code is not
-> stored here.
+> **The wall in front of the code.**
+> This repository is the single place for AFTERTONE's documentation, status, bugs, and tracking. The source code lives in a separate, private repository and is never stored here.
 
-## Documentation map
+AFTERTONE is a retro-pager-style, CRT-interface messaging app for exactly two people. Two devices pair with a private invite code, messages are encrypted in the browser, and the relay sees only ciphertext. No accounts. No database. No message history.
 
-| If you are looking for… | Go to |
-|---|---|
-| A project's documentation index | `<project>/README.md` — starting with [AFTERTONE](aftertone/README.md) |
-| Architecture and lifecycle diagrams | `<project>/architecture/` |
-| Security model and limitations | `<project>/security/` |
-| Public policies — Terms, Privacy, Security, FAQ | `<project>/policies/` |
-| Test plans and manual checklists | `<project>/testing/` |
-| Status reports and verification records | `<project>/reports/` |
-| Deployment and operations runbooks | `<project>/operations/` |
-| Demo and development videos | [media-index.md](media-index.md) |
+---
 
-## Demo — watch it here
-
-This video plays right here in the README. It is not just a link to
-another page.
+## Demo
 
 <video src="assets/aftertone-demo.mp4" controls width="100%">
   Your browser does not support the video tag. The demo file is
   <a href="assets/aftertone-demo.mp4">assets/aftertone-demo.mp4</a>.
 </video>
 
-> AFTERTONE demo — the retro terminal interface, pairing with a private
-> invite code, and a message going from typed text to encrypted relay to
-> printed delivery. No database. No message history.
+> The demo shows the retro terminal interface, pairing with a private invite code, and a message going from typed text to encrypted relay to printed delivery. It does not show the fingerprint VERIFY step — both sides must compare the fingerprint and press VERIFY before messaging is enabled.
 >
-> Note: this demo clip shows the interface and the message path. It does
-> not show the fingerprint VERIFY step — see
-> [aftertone/policies/FAQ.md](aftertone/policies/FAQ.md) and
-> [aftertone/security/SECURITY.md](aftertone/security/SECURITY.md) for
-> why that step matters before messaging is enabled.
+> **Note:** the video file itself is uploaded separately via the GitHub web interface (binary files are not pushed with the text workflow). Until `assets/aftertone-demo.mp4` is uploaded, this player will not play. See [assets/README.md](assets/README.md).
 
-## Projects
+---
 
-| Project | What it is | Documentation | Source code |
-|---|---|---|---|
-| AFTERTONE | Real-time, two-participant messaging with a retro CRT interface. Two devices pair with a private invite code, messages are encrypted in the browser, the relay sees only ciphertext. | [aftertone/README.md](aftertone/README.md) | Private, separate repository — not here, by design |
-
-## AFTERTONE at a glance
+## Current status — at a glance
 
 | | |
 |---|---|
-| Live site | https://aftertone-u6rr.onrender.com/ |
-| Tagline | Two devices. One private line. |
-| Pairing | Private invite code (`MB88-XXXX-XXXX`) |
-| Encryption | P-256 ECDH, HKDF-SHA256, AES-256-GCM, in the browser |
-| Relay sees | Only ciphertext (`{ iv, ciphertext }`) |
-| Database / message history | None, by design |
-| Verification | Both sides must compare the fingerprint and press VERIFY before messaging is enabled |
-| Production | On hold — the runbook is not a launch approval |
-| Device testing | Real Safari, physical iOS, physical Android — not tested yet |
-| Security audit | Not independently audited — status: **UNVERIFIED** |
-| Policies | Terms placeholders (operator, contact, governing law) still to complete |
+| **Project** | AFTERTONE — two-person secure messaging |
+| **Code repository** | Private, separate repository — not here, by design |
+| **Live site** | https://beeperline.onrender.com — **currently SUSPENDED, not deleted** |
+| **Code on main** | `29121198` (PR #31, Search Console verification tag) |
+| **Tests on main** | CI #69 green |
+| **Production** | **NOT READY FOR RELEASE** — deployment is not a production approval |
+| **Analytics** | Google Analytics 4, working via external `/ga.js` |
+| **Search** | Google Search Console verified owner — **not yet indexed** |
+| **Monitoring** | UptimeRobot monitor paused while the site is suspended |
+| **Security audit** | Not independently audited — see [STATUS.md](aftertone/STATUS.md) |
+
+Full, dated status: **[aftertone/STATUS.md](aftertone/STATUS.md)** — read that page first. This README's table is a summary of it, not a replacement.
+
+---
+
+## What we track here
+
+This repository tracks only what the owner asked it to track:
+
+| Track | File | What it holds |
+|---|---|---|
+| Project info & current status | [aftertone/STATUS.md](aftertone/STATUS.md) | What AFTERTONE is, where it stands today, what works, what is open, what is blocked |
+| Bugs & open issues | [aftertone/BUGS.md](aftertone/BUGS.md) | Every known bug and loose thread, with evidence and status |
+| Roadmap | [aftertone/ROADMAP.md](aftertone/ROADMAP.md) | What is next, what is parked, what will never be done |
+| Decisions | [aftertone/DECISIONS.md](aftertone/DECISIONS.md) | Decisions that must not be re-asked, with dates |
+| Changelog | [aftertone/CHANGELOG.md](aftertone/CHANGELOG.md) | What actually shipped, by PR and commit |
+| Architecture | [aftertone/architecture/](aftertone/architecture/) | Diagrams and how the system fits together |
+
+Bug reports use the templates in [.github/ISSUE_TEMPLATE/](.github/ISSUE_TEMPLATE/) so every report carries the same evidence: what happened, where, on which commit, and how to reproduce it.
+
+---
+
+## Architecture
+
+The diagrams below are self-contained HTML exports. GitHub does not render them inline — download the file and open it in a browser.
+
+| Diagram | File |
+|---|---|
+| System architecture | [aftertone/architecture/archify/aftertone-architecture.html](aftertone/architecture/archify/aftertone-architecture.html) |
+| Pair lifecycle | [aftertone/architecture/archify/aftertone-pair-lifecycle.html](aftertone/architecture/archify/aftertone-pair-lifecycle.html) |
+| Message flow | [aftertone/architecture/archify/message-flow.html](aftertone/architecture/archify/message-flow.html) |
+| Remap / re-pairing | [aftertone/architecture/archify/aftertone-remap.html](aftertone/architecture/archify/aftertone-remap.html) |
+
+How it works, in one paragraph: two devices pair with a private invite code, exchange keys bound to a single exchange ID, both sides compare a fingerprint over an independent channel and press VERIFY, and only then is messaging enabled. Messages are encrypted in the browser (P-256 ECDH, HKDF-SHA256, AES-256-GCM) and the server relays ciphertext only, keeping all state in memory.
+
+---
 
 ## What this repository is — and is not
 
 | This repo is | This repo is not |
 |---|---|
-| Architecture, security, testing, operations, and public policies, in one place | A source-code repository |
+| Documentation, status, bugs, and tracking for AFTERTONE | A source-code repository |
 | A paper trail: what was built, how it works, what was tested, what is still unknown | A launch approval, a security audit, or a production guarantee |
-| Snapshots, preserved as received, with corrections recorded in the project index | A place for secrets or internal credentials |
+| The wall in front of the private code repository | A place for secrets, credentials, tokens, or invite codes |
 
-## Folder structure
+**Never commit here:** passwords, API keys, session tokens, `TERMS_SECRET` or any other secret, private keys, invite codes, or message content. If a secret ever lands in this repo, rotate it — do not just delete the file.
 
-| Path | Contents |
-|---|---|
-| `README.md` | You are here — the map, then the demo |
-| `assets/aftertone-demo.mp4` | The demo video embedded above, so it plays in the README |
-| `media-index.md` | Other videos, indexed not committed |
-| `aftertone/README.md` | Project index + known inconsistencies |
-| `aftertone/architecture/` | Archify exports + commentary |
-| `aftertone/security/` | Protocol + trust model |
-| `aftertone/policies/` | Terms, Privacy, Security Notice, FAQ |
-| `aftertone/testing/` | Device checklist |
-| `aftertone/reports/` | Master checklist + test records |
-| `aftertone/operations/` | Deployment + runbook |
-| `aftertone/project-readme-snapshot.md` | Source repo README, as received |
+---
 
-## Three rules that keep it honest
+## How status is kept honest
 
-| Rule | What it means |
-|---|---|
-| One document, one purpose | A document explains, records evidence, or gives instructions — not all three |
-| Evidence apart from conclusions | Raw results (checklists, test counts) stay separate from the summaries that interpret them |
-| Snapshots stay snapshots | Files copied from a source repository are preserved as received. Corrections go in the project index, not into the copy |
+1. **One status page.** [STATUS.md](aftertone/STATUS.md) is the current truth. Older status is history in [CHANGELOG.md](aftertone/CHANGELOG.md), not edited in place.
+2. **Evidence apart from conclusions.** A claim cites a commit, a CI run, or a live check — "green" names the run, "verified" names the check.
+3. **Commit, merge, and release are three separate decisions.** A commit is not merge approval. A merged PR is not production readiness. Nothing here is a release approval.
+4. **A blocked test is never a pass.** Cancelled, skipped, or environment-blocked tests are reported as such, never counted as green.
 
-## Architecture and visual documentation
+---
 
-Diagrams are exported from [Archify](https://github.com/tt-a1i/archify) as
-self-contained HTML files. They are kept unmodified, with their original
-names, in `<project>/architecture/archify/`. Human-written explanation
-lives beside them in `<project>/architecture/README.md`, so the exports
-stay as source material and the commentary stays editable.
+## Resume checklist (when the site comes back)
 
-GitHub does not render these HTML pages — download the file and open it
-in a browser. The diagrams are not embedded in this README.
+The site is suspended, not deleted. To resume, in order:
 
-## Media and demonstrations
+1. Render: Resume the `beeperline` service
+2. Check `/health` returns `{"ok":true}` and the homepage loads
+3. UptimeRobot: unpause the `beeperline` monitor
+4. Recheck Google Analytics Realtime and Search Console status
+5. Update [STATUS.md](aftertone/STATUS.md) with the resume date and the new checks
 
-Most videos are not committed to Git — [media-index.md](media-index.md)
-lists each video with its project, type, description, and where it is
-held. A video with no public link is listed as not hosted, and no URL is
-given until one exists.
+---
 
-The one exception is the demo above: `assets/aftertone-demo.mp4` is
-committed on purpose, so the README can play it inline instead of
-linking out to another page.
+## Repository history
 
-## Adding to this repository
-
-| To add… | Do this |
-|---|---|
-| A new project | Create a top-level folder named after the project with a `README.md` index. Add subfolders only when you have a file for them. Link the project from the tables above. |
-| A new diagram | Put the original export in `<project>/architecture/archify/` and add a row in `<project>/architecture/README.md`. |
-| A new report or test record | Put it in `reports/` or `testing/`, and note the date and the commit or version it describes. |
-| A new policy page | Put it in `<project>/policies/` and link it from the project index. Note any placeholders that must be completed before publication. |
-| A new video | Add a row to [media-index.md](media-index.md). Do not commit the video file — unless it is meant to play in a README, like the demo above. |
-| Learning notes | Create a top-level `learning/` folder with an index when the first reusable note exists. |
-
-## Repository status
-
-| Item | Status |
-|---|---|
-| Projects documented | AFTERTONE only |
-| Learning area | Does not exist yet — no content for it |
-| AFTERTONE snapshots | Documents written on or around 2026-10-25, not re-checked against the source code from here |
-| Physical-device testing | Not done |
-| Production preparation | On hold |
-| Cryptographic design | Not independently audited |
-| Demo videos indexed | One, with no public link yet — plus the embedded demo above |
+This repository was rebuilt on 2026-10-29. The previous documentation set (25 Oct 2026 snapshots) was removed from the working tree and replaced with this tracking system. The old content remains in Git history at commit `41bf4e8` — it was not erased from history, and it is not current. Do not quote it as the project's status.
