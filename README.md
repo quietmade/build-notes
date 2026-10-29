@@ -49,7 +49,11 @@
 
 ---
 
-https://github.com/user-attachments/assets/d4314c99-09d7-4212-b640-4af4471479d3
+<table>
+  <tr>
+    <td width="50%">https://github.com/user-attachments/assets/d4314c99-09d7-4212-b640-4af4471479d3</td>
+  </tr>
+</table>
 
 ## AFTERTONE Runtime Architecture: Two Clients and Server
 
