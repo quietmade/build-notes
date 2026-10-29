@@ -1,3 +1,5 @@
+https://github.com/user-attachments/assets/1eb78d52-3a57-4b11-83a4-306473d42417
+
 *A retro two-person messaging terminal with browser-side encrypted message relay.*
 
 ## Table of Contents
