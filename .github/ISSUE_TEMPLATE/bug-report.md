@@ -2,7 +2,6 @@
 name: Bug report
 about: Report a bug in AFTERTONE with evidence
 title: "[BUG] "
-labels: ["bug"]
 ---
 
 ## Steps to reproduce
