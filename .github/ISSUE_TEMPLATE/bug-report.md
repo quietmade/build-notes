@@ -5,22 +5,10 @@ title: "[BUG] "
 labels: ["bug"]
 ---
 
-## What happened
-
-<!-- One or two sentences: what failed, not what you assume caused it. -->
-
-## Where
-
-- Page / area:
-- Commit on main (if known):
-- CI run (if any):
-- Browser / device:
-
 ## Steps to reproduce
 
 1.
 2.
-3.
 
 ## Expected vs actual
 
