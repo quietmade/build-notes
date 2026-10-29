@@ -6,14 +6,6 @@
   <em>A retro two-person messaging terminal with browser-side encrypted message relay.</em>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Node.js-Runtime-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js">
-  <img src="https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript">
-  <img src="https://img.shields.io/badge/CSS3-Styling-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3">
-  <img src="https://img.shields.io/badge/Web_Crypto_API-Encryption-8A2BE2?style=flat-square" alt="Web Crypto API">
-  <img src="https://img.shields.io/badge/Tests-CI_297_Passing-2EA44F?style=flat-square" alt="Tests">
-</p>
-
 > *AFTERTONE's code repo will never be public, so its docs, status, bugs, and history live here instead — in a separate repo — keeping the code itself protected and the code repo clean.*
 
 ## Table of Contents
@@ -57,6 +49,8 @@
 
 ---
 
+https://github.com/user-attachments/assets/d4314c99-09d7-4212-b640-4af4471479d3
+
 ## AFTERTONE Runtime Architecture: Two Clients and Server
 
 Two browser clients and one server. Each client holds its own keys and encrypts messages in the browser; the server only relays encrypted messages and never sees plaintext.
@@ -64,5 +58,3 @@ Two browser clients and one server. Each client holds its own keys and encrypts 
 Flow: Terms → Invite and pairing → Key exchange → Bilateral fingerprint verification → Encrypted relay over WebSocket.
 
 Server: Node.js WebSocket relay, with server-snapshotted expiry and origin checks on WebSocket upgrade and Terms acceptance.
-
-https://github.com/user-attachments/assets/b732c038-f2dd-483b-8ae3-25654f5937bf
