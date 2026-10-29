@@ -1,3 +1,5 @@
+<video src="https://github.com/quietmade/build-notes/raw/main/assets/aftertone-demo.mp4" controls></video>
+
 *A retro two-person messaging terminal with browser-side encrypted message relay.*
 
 ## Table of Contents
