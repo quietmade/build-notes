@@ -49,8 +49,6 @@
 
 ---
 
-https://github.com/user-attachments/assets/b732c038-f2dd-483b-8ae3-25654f5937bf
-
 ## AFTERTONE Runtime Architecture: Two Clients and Server
 
 Two browser clients and one server. Each client holds its own keys and encrypts messages in the browser; the server only relays encrypted messages and never sees plaintext.
@@ -58,3 +56,5 @@ Two browser clients and one server. Each client holds its own keys and encrypts 
 Flow: Terms → Invite and pairing → Key exchange → Bilateral fingerprint verification → Encrypted relay over WebSocket.
 
 Server: Node.js WebSocket relay, with server-snapshotted expiry and origin checks on WebSocket upgrade and Terms acceptance.
+
+https://github.com/user-attachments/assets/b732c038-f2dd-483b-8ae3-25654f5937bf
